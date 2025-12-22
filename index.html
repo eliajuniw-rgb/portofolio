@@ -3,70 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Elia</title>
+    <title>Portofolio Elia - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* CSS sederhana */
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .bg-purple-gradient {
-            background: linear-gradient(to right, #4f46e5, #7c3aed);
-        }
-        
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .photo-container {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #7c3aed;
-            margin: 0 auto;
-            background-color: #f3f4f6;
-        }
-        
-        .photo-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #e5e7eb;
-            color: #6b7280;
-        }
-        
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 40px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50%;
-            height: 3px;
-            background-color: #7c3aed;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
     
@@ -75,24 +15,23 @@
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <div class="bg-purple-600 text-white w-8 h-8 rounded-md flex items-center justify-center font-bold">E</div>
-                <span class="font-bold text-lg">Elia Portofolio</span>
+                <a href="index.html" class="font-bold text-lg hover:text-purple-600">Elia Portofolio</a>
             </div>
             <div class="flex space-x-6">
-                <a href="#home" class="text-gray-700 hover:text-purple-600 font-medium">Home</a>
-                <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium">Tentang</a>
-                <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium">Kontak</a>
+                <a href="index.html" class="active-page">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-purple-600 font-medium">Tentang</a>
+                <a href="contact.html" class="text-gray-700 hover:text-purple-600 font-medium">Kontak</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section dengan foto -->
-    <section id="home" class="pt-20 pb-12 px-4 max-w-4xl mx-auto">
+    <section class="pt-20 pb-12 px-4 max-w-4xl mx-auto">
         <div class="text-center mt-8 mb-12">
             <!-- Foto Elia -->
             <div class="photo-container mb-6">
                 <img id="elia-photo" src="elia.jpeg" 
-                     alt="Foto Elia Juni Wiana" class="w-full h-full object-cover" 
-                     onerror="this.onerror=null; this.src=''; document.getElementById('photo-placeholder').style.display='flex';">
+                     alt="Foto Elia Juni Wiana" class="w-full h-full object-cover">
                 <div id="photo-placeholder" class="photo-placeholder" style="display: none;">
                     <i class="fas fa-user text-4xl mb-2"></i>
                     <p class="text-sm">elia.jpg</p>
@@ -105,111 +44,64 @@
                 Saya seorang web developer yang mempunyai semangat tinggi untuk semakin berkembang di bidang pengembangan web. 
                 Saya senang belajar teknologi baru dan membuat solusi digital yang kreatif.
             </p>
-            <a href="#contact" class="bg-purple-gradient text-white px-6 py-3 rounded-lg font-medium inline-block hover:opacity-90">
-                Hubungi Saya <i class="ml-2 fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Tentang Saya -->
-    <section id="about" class="py-12 px-4 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="section-title text-3xl font-bold">Tentang Saya</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="card-hover bg-gray-50 p-6 rounded-xl border border-gray-200">
-                    <div class="text-purple-600 text-2xl mb-4">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Pendidikan</h3>
-                    <p class="text-gray-600">
-                        Saya lulusan S1 Teknik Informatika dengan pengalaman dalam pengembangan web menggunakan HTML, CSS, JavaScript, dan framework modern.
-                    </p>
-                </div>
-                
-                <div class="card-hover bg-gray-50 p-6 rounded-xl border border-gray-200">
-                    <div class="text-purple-600 text-2xl mb-4">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Keahlian</h3>
-                    <p class="text-gray-600">
-                        Saya ahli dalam HTML, CSS, JavaScript, dan framework seperti Tailwind CSS. Saya juga memiliki pengalaman dengan React dan Node.js.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="mt-8 bg-purple-50 p-6 rounded-xl border border-purple-100">
-                <h3 class="text-xl font-bold mb-4 text-purple-800">Mengapa Saya Memilih Web Development?</h3>
-                <p class="text-gray-700">
-                    Saya tertarik dengan web development karena saya senang membuat sesuatu dari nol dan melihat ide-ide menjadi kenyataan. 
-                    Dunia web terus berkembang dan selalu ada hal baru untuk dipelajari, yang membuat saya tetap termotivasi.
-                </p>
+            <div class="flex justify-center space-x-4">
+                <a href="about.html" class="bg-purple-gradient text-white px-6 py-3 rounded-lg font-medium inline-block hover:opacity-90">
+                    Tentang Saya <i class="ml-2 fas fa-user"></i>
+                </a>
+                <a href="contact.html" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium inline-block hover:opacity-90">
+                    Hubungi Saya <i class="ml-2 fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Kontak -->
-    <section id="contact" class="py-12 px-4 bg-gray-50">
+    <!-- Proyek Unggulan -->
+    <section class="py-12 px-4 bg-white">
         <div class="max-w-4xl mx-auto">
-            <h2 class="section-title text-3xl font-bold">Hubungi Saya</h2>
+            <h2 class="section-title text-3xl font-bold">Proyek Unggulan</h2>
             
             <div class="grid md:grid-cols-3 gap-6 mt-8">
-                <a href="mailto:junejunejun639@gmail.com" 
-                   class="card-hover bg-white p-6 rounded-xl border border-gray-200 text-center block hover:shadow-lg">
-                    <div class="text-purple-600 text-3xl mb-4">
-                        <i class="fas fa-envelope"></i>
+                <div class="card-hover bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div class="text-purple-600 text-2xl mb-4">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <h3 class="font-bold mb-2">Email</h3>
-                    <p class="text-gray-600 text-sm">junejunejun639@gmail.com</p>
-                </a>
-                
-                <a href="tel:082360070000" 
-                   class="card-hover bg-white p-6 rounded-xl border border-gray-200 text-center block hover:shadow-lg">
-                    <div class="text-purple-600 text-3xl mb-4">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Telepon</h3>
-                    <p class="text-gray-600 text-sm">0823-6007-0000</p>
-                </a>
-                
-                <div class="card-hover bg-white p-6 rounded-xl border border-gray-200 text-center">
-                    <div class="text-purple-600 text-3xl mb-4">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3 class="font-bold mb-2">Lokasi</h3>
-                    <p class="text-gray-600 text-sm">Pekanbaru, Indonesia</p>
+                    <h3 class="text-xl font-bold mb-3">E-commerce Website</h3>
+                    <p class="text-gray-600 mb-4">
+                        Website toko online dengan fitur lengkap seperti keranjang belanja, checkout, dan sistem pembayaran.
+                    </p>
+                    <span class="inline-block bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">React.js</span>
+                    <span class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full ml-2">Node.js</span>
                 </div>
-            </div>
-            
-            <!-- Form Kontak Sederhana -->
-            <div class="mt-12 bg-white p-8 rounded-xl border border-gray-200 max-w-2xl mx-auto">
-                <h3 class="text-xl font-bold mb-6 text-center">Kirim Pesan</h3>
-                <form id="contact-form" class="space-y-4">
-                    <div>
-                        <label class="block text-gray-700 mb-2" for="name">Nama</label>
-                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Nama Anda">
+                
+                <div class="card-hover bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div class="text-purple-600 text-2xl mb-4">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    
-                    <div>
-                        <label class="block text-gray-700 mb-2" for="email">Email</label>
-                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="email@anda.com">
+                    <h3 class="text-xl font-bold mb-3">Analytics Dashboard</h3>
+                    <p class="text-gray-600 mb-4">
+                        Dashboard analitik dengan visualisasi data interaktif untuk monitoring performa bisnis.
+                    </p>
+                    <span class="inline-block bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Vue.js</span>
+                    <span class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full ml-2">Chart.js</span>
+                </div>
+                
+                <div class="card-hover bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div class="text-purple-600 text-2xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    
-                    <div>
-                        <label class="block text-gray-700 mb-2" for="message">Pesan</label>
-                        <textarea id="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Tulis pesan Anda..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="bg-purple-gradient text-white w-full py-3 rounded-lg font-medium hover:opacity-90 mt-4">
-                        Kirim Pesan <i class="ml-2 fas fa-paper-plane"></i>
-                    </button>
-                </form>
+                    <h3 class="text-xl font-bold mb-3">Mobile App UI</h3>
+                    <p class="text-gray-600 mb-4">
+                        Desain antarmuka aplikasi mobile dengan fokus pada user experience dan responsivitas.
+                    </p>
+                    <span class="inline-block bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Figma</span>
+                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm px-3 py-1 rounded-full ml-2">UI/UX</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-4">
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-12">
         <div class="max-w-4xl mx-auto text-center">
             <p class="text-xl font-bold mb-2">Elia Juni Wiana</p>
             <p class="text-gray-300 mb-6">Web Developer | Designer | Problem Solver</p>
@@ -226,36 +118,16 @@
                 </a>
             </div>
             
+            <div class="flex justify-center space-x-6 mb-6 text-gray-300">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="about.html" class="hover:text-white">Tentang</a>
+                <a href="contact.html" class="hover:text-white">Kontak</a>
+            </div>
+            
             <p class="text-gray-400 text-sm">© 2024 Portofolio Elia Juni Wiana. Dibuat dengan ❤️ di Pekanbaru.</p>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Form submission sederhana
-            const contactForm = document.getElementById('contact-form');
-            
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                // Ambil nilai dari form
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-                
-                // Validasi sederhana
-                if (!name || !email || !message) {
-                    alert('Harap isi semua field!');
-                    return;
-                }
-                
-                // Tampilkan pesan sukses
-                alert(`Terima kasih ${name}! Pesan Anda telah dikirim. Saya akan membalas ke ${email} segera.`);
-                
-                // Reset form
-                contactForm.reset();
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
